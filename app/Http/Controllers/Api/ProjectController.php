@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Services\ProjectService;
 use App\Http\Resources\ProjectResource;
+use Dedoc\Scramble\Attributes\PathParameter;
+use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Http\Request;
 use App\Models\Project;
@@ -42,6 +44,7 @@ class ProjectController extends Controller
         return new ProjectResource($project);
     }
 
+//    #[PathParameter('title', description: 'Project title being updated', type: 'string', example: 'My title')]
     public function update(Request $request, Project $project)
     {
         // Authorization Check (Policy)
