@@ -31,7 +31,7 @@ return [
          */
         'description' => 'Project manager is admin panel that allows to: create, read, show, update, delete projects by
          owner (user) and protected by authorization from another owners. 
-         Features: user authentication; Authorized CRUD for projects. Build on Laravel 11, PHP 8, MySQL 8, package dedoc/scramble.',
+         Features: user registration, authentication; Authorized CRUD for projects. Build on Laravel 11, PHP 8, MySQL 8, package dedoc/scramble.',
     ],
 
     /*

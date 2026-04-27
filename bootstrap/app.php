@@ -33,4 +33,18 @@ return Application::configure(basePath: dirname(__DIR__))
                 'message' => 'Resource not found.'
             ], 404);
         });
+
+//        // 500 Internal Server Error
+//        $exceptions->render(function (Exception $e, Request $request) {
+//            // We check if the status code is not already set by the specific handlers above
+//            if ($e->getStatusCode() === 500 || !$e->getStatusCode()) {
+//                return response()->json([
+//                    'message' => 'Internal Server Error.'
+//                ], 500);
+//            }
+//
+//            // If it's not a 500, let Laravel handle the normal flow
+//            throw $e;
+//        });
+
     })->create();
