@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Cache;
 
 class SiteMapController extends Controller
 {
-    public function getSitMap()
+    public function getSiteMap()
     {
         $content = Cache::remember('sitemap', now()->addHours(24), function () {
             $sitemap = '<?xml version="1.0" encoding="UTF-8"?>';
