@@ -73,6 +73,8 @@ return [
          * - stacked - Everything in a single column, making integrations with existing websites that have their own sidebar or other columns already.
          */
         'layout' => 'responsive',
+
+        'middleware' => ['web', 'protect-docs'],
     ],
 
     /*
@@ -130,6 +132,7 @@ return [
     'middleware' => [
         'web',
         RestrictedDocsAccess::class,
+        \App\Http\Middleware\ProtectDocs::class
     ],
 
     'extensions' => [],

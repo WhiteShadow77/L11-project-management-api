@@ -15,7 +15,9 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
-        //
+        $middleware->alias([
+            'protect-docs' => \App\Http\Middleware\ProtectDocs::class,
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         // Force JSON response for 403 (Unauthorized) errors
