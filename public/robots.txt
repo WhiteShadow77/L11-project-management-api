@@ -1,2 +1,29 @@
 User-agent: *
-Disallow:
+Allow: /
+
+Disallow: /storage/
+Disallow: /vendor/
+Disallow: /app/
+Disallow: /bootstrap/
+Disallow: /config/
+Disallow: /database/
+Disallow: /resources/
+Disallow: /routes/
+Disallow: /tests/
+Disallow: /.env
+Disallow: /composer.json
+Disallow: /composer.lock
+Disallow: /package.json
+Disallow: /phpunit.xml
+Disallow: /server.php
+Disallow: /webpack.mix.js
+
+Disallow: /admin
+Disallow: /login
+Disallow: /logout
+Disallow: /register
+Disallow: /password
+Disallow: /forgot-password
+Disallow: /reset-password
+
+Sitemap: https://tmp-site-7.free.nf/sitemap.xml
