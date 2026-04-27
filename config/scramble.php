@@ -29,7 +29,9 @@ return [
         /*
          * Description rendered on the home page of the API documentation (`/docs/api`).
          */
-        'description' => 'My API',
+        'description' => 'Project manager is admin panel that allows to: create, read, show, update, delete projects by
+         owner (user) and protected by authorization from another owners. 
+         Features: user authentication; Authorized CRUD for projects.',
     ],
 
     /*
@@ -39,7 +41,7 @@ return [
         /*
          * Define the title of the documentation's website. App name is used when this config is `null`.
          */
-        'title' => null,
+        'title' => 'Project manager',
 
         /*
          * Define the theme of the documentation. Available options are `light`, `dark`, and `system`.

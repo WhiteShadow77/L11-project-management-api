@@ -17,6 +17,7 @@ class AuthController extends Controller
     }
 
     /**
+     * Register
      * @unauthenticated
      */
     public function register(Request $request)
@@ -36,6 +37,7 @@ class AuthController extends Controller
     }
 
     /**
+     * Login
      * @unauthenticated
      */
     public function login(Request $request)
@@ -57,6 +59,9 @@ class AuthController extends Controller
         ]);
     }
 
+    /**
+     * Logout
+     */
     public function logout()
     {
         $this->authService->logout();
