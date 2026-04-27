@@ -14,9 +14,6 @@ return new class extends Migration
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
 
-            // Foreign Key to Users table
-            // constrained() automatically assumes 'user_id' and references 'users' table
-            // onDelete('cascade') ensures if a user is deleted, their projects are too
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
 
             $table->string('title');

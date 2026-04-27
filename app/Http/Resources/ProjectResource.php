@@ -19,15 +19,9 @@ class ProjectResource extends JsonResource
             'title' => $this->title,
             'description' => $this->description,
 
-            // Computed Property: Count related tasks without loading them all
-            // (Tip: In your Service, use ->withCount('tasks') for performance)
-            'tasks_count' => $this->whenCounted('tasks'),
 
-            // Format date to be human-readable
+            //'tasks_count' => $this->whenCounted('tasks'),
             'created_at' => $this->created_at->format('d M Y'),
-
-            // You can optionally include the tasks here if needed
-            // 'tasks' => TaskResource::collection($this->whenLoaded('tasks')),
         ];
     }
 }
