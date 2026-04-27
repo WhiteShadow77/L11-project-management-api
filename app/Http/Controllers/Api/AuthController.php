@@ -16,6 +16,9 @@ class AuthController extends Controller
         $this->authService = $authService;
     }
 
+    /**
+     * @unauthenticated
+     */
     public function register(Request $request)
     {
         $request->validate([
@@ -32,6 +35,9 @@ class AuthController extends Controller
         ]);
     }
 
+    /**
+     * @unauthenticated
+     */
     public function login(Request $request)
     {
         $request->validate([

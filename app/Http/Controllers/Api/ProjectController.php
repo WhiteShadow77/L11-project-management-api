@@ -21,12 +21,18 @@ class ProjectController extends Controller
         $this->projectService = $projectService;
     }
 
+    /**
+     * All
+     */
     public function index()
     {
         $projects = $this->projectService->getAllProjects();
         return ProjectResource::collection($projects);
     }
 
+    /**
+     * Show (by id)
+     */
     public function show(Project $project)
     {
         // This checks the Policy. If false, it throws 403.
@@ -35,6 +41,9 @@ class ProjectController extends Controller
         return new ProjectResource($project);
     }
 
+    /**
+     * Create
+     */
     public function store(Request $request)
     {
         $request->validate(['title' => 'required|max:255']);
@@ -44,7 +53,9 @@ class ProjectController extends Controller
         return new ProjectResource($project);
     }
 
-//    #[PathParameter('title', description: 'Project title being updated', type: 'string', example: 'My title')]
+    /**
+     * Update
+     */
     public function update(Request $request, Project $project)
     {
         // Authorization Check (Policy)
@@ -57,6 +68,9 @@ class ProjectController extends Controller
         return new ProjectResource($project);
     }
 
+    /**
+     * Delete
+     */
     public function destroy(Project $project)
     {
         // Authorization Check (Policy)
