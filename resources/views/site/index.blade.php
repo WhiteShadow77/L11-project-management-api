@@ -111,7 +111,7 @@
         <h2>📖 API Documentation</h2>
         <p>This project features automatically generated API documentation.</p>
         <p>Once the application is running, visit:<br>
-            <a href="{{route('site.index')}}/api/docs">{{route('site.index')}}/api/docs</a></p>
+            <a href="{{route('site.index')}}/docs/api">{{route('site.index')}}/docs/api</a></p>
     </section>
 
     <hr>
