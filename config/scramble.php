@@ -2,6 +2,10 @@
 
 use Dedoc\Scramble\Http\Middleware\RestrictedDocsAccess;
 
+$protocol = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') ? "https" : "http";
+$host = $_SERVER['HTTP_HOST'];
+$current_url = $protocol . "://" . $host;
+
 return [
     /*
      * Your API path. By default, all routes starting with this path will be added to the docs.
@@ -54,9 +58,7 @@ return [
         * Backend: PHP 8.2, Laravel 11
         * Database: MySQL
         * Authentication: Laravel Sanctum
-        * Documentation: Dedoc/Scramble
-
-          ",
+        * Documentation: Dedoc/Scramble " . '[home](https://home)',
     ],
 
     /*
@@ -86,7 +88,7 @@ return [
         /*
          * URL to an image that displays as a small square logo next to the title, above the table of contents.
          */
-        'logo' => '',
+        'logo' => $current_url . '/favicon.png',
 
         /*
          * Use to fetch the credential policy for the Try It feature. Options are: omit, include (default), and same-origin
