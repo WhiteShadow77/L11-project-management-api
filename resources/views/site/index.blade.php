@@ -73,7 +73,7 @@
 <div class="container">
     <h1>Laravel Project Management API</h1>
     <p>A robust, secure, and scalable REST API backend built with Laravel. Designed to demonstrate best practices in
-        architecture, security, and automated testing.</p>
+        architecture, security.</p>
 
     <div class="badges">
         <img src="https://img.shields.io/badge/PHP-8.2-blue" alt="PHP 8.2" class="badge">
@@ -86,7 +86,7 @@
         <h2>🚀 About This Project</h2>
         <p>This application serves as a backend for a Project Management tool. It demonstrates production-ready code
             structure, utilizing a Service Layer to separate business logic from controllers, ensuring the application
-            is maintainable and testable.</p>
+            is maintainable.</p>
 
         <h3>Key Features</h3>
         <ul>
@@ -103,9 +103,6 @@
             </li>
             <li><strong>Auto-Documentation</strong>: Interactive API documentation powered by
                 <strong>Dedoc/Scramble</strong>.
-            </li>
-            <li><strong>Testing</strong>: Comprehensive Feature Test suite using PHPUnit to guarantee reliability and
-                security.
             </li>
         </ul>
     </section>
@@ -132,7 +129,6 @@
             <li><strong>Backend</strong>: PHP 8.2, Laravel 11</li>
             <li><strong>Database</strong>: MySQL</li>
             <li><strong>Authentication</strong>: Laravel Sanctum</li>
-            {{--            <li><strong>Testing</strong>: PHPUnit</li>--}}
             <li><strong>Documentation</strong>: Dedoc/Scramble</li>
         </ul>
     </section>
