@@ -11,7 +11,6 @@ use App\Services\ProjectService;
 use Dedoc\Scramble\Attributes\PathParameter;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
-use Illuminate\Http\Request;
 
 class ProjectController extends Controller
 {
