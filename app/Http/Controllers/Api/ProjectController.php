@@ -3,13 +3,15 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Services\ProjectService;
+use App\Http\Requests\Project\ProjectStoreRequest;
+use App\Http\Requests\Project\ProjectUpdateRequest;
 use App\Http\Resources\ProjectResource;
+use App\Models\Project;
+use App\Services\ProjectService;
 use Dedoc\Scramble\Attributes\PathParameter;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Http\Request;
-use App\Models\Project;
 
 class ProjectController extends Controller
 {
@@ -44,12 +46,12 @@ class ProjectController extends Controller
     /**
      * Create
      */
-    public function store(Request $request)
+    public function store(ProjectStoreRequest $request)
     {
-        $request->validate([
-            'title' => 'required|max:255',
-            'description' => 'required|max:1000',
-        ]);
+//        $request->validate([
+//            'title' => 'required|max:255',
+//            'description' => 'required|max:1000',
+//        ]);
 
         $project = $this->projectService->createProject($request->all());
 
@@ -59,15 +61,15 @@ class ProjectController extends Controller
     /**
      * Update
      */
-    public function update(Request $request, Project $project)
+    public function update(ProjectUpdateRequest $request, Project $project)
     {
         // Authorization Check (Policy)
         $this->authorize('update', $project);
 
-        $request->validate([
-            'title' => 'sometimes|required|max:255',
-            'description' => 'sometimes|required|max:1000',
-        ]);
+//        $request->validate([
+//            'title' => 'sometimes|required|max:255',
+//            'description' => 'sometimes|required|max:1000',
+//        ]);
 
         $project = $this->projectService->updateProject($project, $request->all());
 
