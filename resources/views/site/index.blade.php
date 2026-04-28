@@ -91,7 +91,7 @@
         <p>This project is not just a simple CRUD app; it is built to scale:</p>
         <ol>
             <li><strong>Service Layer Pattern</strong>: Business logic is encapsulated in <code>Services</code>, keeping <code>Controllers</code> thin and focused only on HTTP handling.</li>
-{{--            <li><strong>Form Request Validation</strong>: Validation logic is decoupled from controllers using dedicated Request classes.</li>--}}
+            <li><strong>Form Request Validation</strong>: Validation logic is decoupled from controllers using dedicated Request classes.</li>
             <li><strong>API Resources</strong>: Data is transformed cleanly before being sent to the client, ensuring a consistent JSON structure.</li>
         </ol>
     </section>
