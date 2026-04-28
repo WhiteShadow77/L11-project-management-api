@@ -29,8 +29,8 @@ return [
         /*
          * Description rendered on the home page of the API documentation (`/docs/api`).
          */
-        'description' => "A robust, secure, and scalable REST API backend built with Laravel. 
-         Designed to demonstrate best practices in architecture, security. \n
+        'description' => "
+         A robust, secure, and scalable REST API backend built with Laravel. Designed to demonstrate best practices in architecture, security. \n
          🚀 About This Project\n
          This application serves as a backend for a Project Management tool. It demonstrates production-ready code structure, utilizing a Service Layer to separate business logic
          from controllers, ensuring the application is maintainable. \n
