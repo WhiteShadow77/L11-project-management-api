@@ -8,8 +8,6 @@ use App\Http\Requests\Project\UpdateProjectRequest;
 use App\Http\Resources\ProjectResource;
 use App\Models\Project;
 use App\Services\ProjectService;
-use Dedoc\Scramble\Attributes\PathParameter;
-use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 class ProjectController extends Controller
@@ -38,7 +36,6 @@ class ProjectController extends Controller
     {
         // This checks the Policy. If false, it throws 403.
         $this->authorize('view', $project);
-
         return new ProjectResource($project);
     }
 
@@ -48,7 +45,6 @@ class ProjectController extends Controller
     public function store(StoreProjectRequest $request)
     {
         $project = $this->projectService->createProject($request->all());
-
         return new ProjectResource($project);
     }
 
@@ -59,9 +55,7 @@ class ProjectController extends Controller
     {
         // Authorization Check (Policy)
         $this->authorize('update', $project);
-
         $project = $this->projectService->updateProject($project, $request->all());
-
         return new ProjectResource($project);
     }
 
@@ -72,9 +66,7 @@ class ProjectController extends Controller
     {
         // Authorization Check (Policy)
         $this->authorize('delete', $project);
-
         $this->projectService->deleteProject($project);
-
         return response()->json(null, 204);
     }
 }
