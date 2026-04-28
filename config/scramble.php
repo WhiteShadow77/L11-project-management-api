@@ -58,7 +58,7 @@ return [
         * Backend: PHP 8.2, Laravel 11
         * Database: MySQL
         * Authentication: Laravel Sanctum
-        * Documentation: Dedoc/Scramble " . '[home](https://home)',
+        * Documentation: Dedoc/Scramble ",
     ],
 
     /*
