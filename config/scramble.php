@@ -51,6 +51,7 @@ return [
         This project is not just a simple CRUD app; it is built to scale:
 
         * Service Layer Pattern: Business logic is encapsulated in Services, keeping Controllers thin and focused only on HTTP handling.
+        * Form Request Validation: Validation logic is decoupled from controllers using dedicated Request classes.
         * API Resources: Data is transformed cleanly before being sent to the client, ensuring a consistent JSON structure.
 
         🛠️ Tech Stack
