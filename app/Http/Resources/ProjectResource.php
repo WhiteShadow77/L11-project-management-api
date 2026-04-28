@@ -18,9 +18,6 @@ class ProjectResource extends JsonResource
             'id' => $this->id,
             'title' => $this->title,
             'description' => $this->description,
-
-
-            //'tasks_count' => $this->whenCounted('tasks'),
             'created_at' => $this->created_at->format('d M Y'),
         ];
     }
