@@ -51,12 +51,11 @@ This project is not just a simple CRUD app; it is built to scale:
 ## 📖 API Documentation
 
 Use creds
-
-login: admin
+```
+login: admin 
 password: secret
-
+```
 Available here:
-
 [View Live API Documentation](https://tmp-site-7.free.nf/docs/api)
 
 ---
