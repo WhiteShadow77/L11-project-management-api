@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Project\ProjectStoreRequest;
-use App\Http\Requests\Project\ProjectUpdateRequest;
+use App\Http\Requests\Project\StoreProjectRequest;
+use App\Http\Requests\Project\UpdateProjectRequest;
 use App\Http\Resources\ProjectResource;
 use App\Models\Project;
 use App\Services\ProjectService;
@@ -45,7 +45,7 @@ class ProjectController extends Controller
     /**
      * Create
      */
-    public function store(ProjectStoreRequest $request)
+    public function store(StoreProjectRequest $request)
     {
         $project = $this->projectService->createProject($request->all());
 
@@ -55,7 +55,7 @@ class ProjectController extends Controller
     /**
      * Update
      */
-    public function update(ProjectUpdateRequest $request, Project $project)
+    public function update(UpdateProjectRequest $request, Project $project)
     {
         // Authorization Check (Policy)
         $this->authorize('update', $project);

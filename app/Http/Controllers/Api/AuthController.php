@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Auth\AuthLoginRequest;
-use App\Http\Requests\Auth\AuthRegisterRequest;
+use App\Http\Requests\Auth\LoginAuthRequest;
+use App\Http\Requests\Auth\RegisterAuthRequest;
 use App\Services\AuthService;
 
 class AuthController extends Controller
@@ -21,7 +21,7 @@ class AuthController extends Controller
      * Register
      * @unauthenticated
      */
-    public function register(AuthRegisterRequest $request)
+    public function register(RegisterAuthRequest $request)
     {
         $token = $this->authService->register($request->all());
 
@@ -35,7 +35,7 @@ class AuthController extends Controller
      * Login
      * @unauthenticated
      */
-    public function login(AuthLoginRequest $request)
+    public function login(LoginAuthRequest $request)
     {
         $token = $this->authService->login($request->only('email', 'password'));
 
