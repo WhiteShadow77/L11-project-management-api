@@ -29,9 +29,34 @@ return [
         /*
          * Description rendered on the home page of the API documentation (`/docs/api`).
          */
-        'description' => 'Project manager is admin panel that allows to: create, read, show, update, delete projects by
-         owner (user) and protected by authorization from another owners. 
-         Features: user registration, authentication; Authorized CRUD for projects. Build on Laravel 11, PHP 8, MySQL 8, package dedoc/scramble.',
+        'description' => "A robust, secure, and scalable REST API backend built with Laravel. 
+         Designed to demonstrate best practices in architecture, security. \n
+         🚀 About This Project\n
+         This application serves as a backend for a Project Management tool. It demonstrates production-ready code structure, utilizing a Service Layer to separate business logic
+         from controllers, ensuring the application is maintainable. \n
+         
+         Key Features\n
+         * Authentication & Security: Secure token-based authentication using Laravel Sanctum.
+         * Authorization: Strict Role-Based Access Control (RBAC) using Policies to ensure data isolation (users cannot access other users' data).
+         * Clean Architecture: Implementation of a Service Layer pattern for better separation of concerns.
+         * Data Transformation: API Resources to standardize JSON responses and hide sensitive internal data.
+         * Auto-Documentation: Interactive API documentation powered by Dedoc/Scramble.
+ 
+        🏗️ Architecture Highlights
+
+        This project is not just a simple CRUD app; it is built to scale:
+
+        * Service Layer Pattern: Business logic is encapsulated in Services, keeping Controllers thin and focused only on HTTP handling.
+        * API Resources: Data is transformed cleanly before being sent to the client, ensuring a consistent JSON structure.
+
+        🛠️ Tech Stack
+
+        * Backend: PHP 8.2, Laravel 11
+        * Database: MySQL
+        * Authentication: Laravel Sanctum
+        * Documentation: Dedoc/Scramble
+
+          ",
     ],
 
     /*
@@ -41,7 +66,7 @@ return [
         /*
          * Define the title of the documentation's website. App name is used when this config is `null`.
          */
-        'title' => 'Project manager',
+        'title' => 'Project Management API',
 
         /*
          * Define the theme of the documentation. Available options are `light`, `dark`, and `system`.
