@@ -48,11 +48,6 @@ class ProjectController extends Controller
      */
     public function store(ProjectStoreRequest $request)
     {
-//        $request->validate([
-//            'title' => 'required|max:255',
-//            'description' => 'required|max:1000',
-//        ]);
-
         $project = $this->projectService->createProject($request->all());
 
         return new ProjectResource($project);
@@ -65,11 +60,6 @@ class ProjectController extends Controller
     {
         // Authorization Check (Policy)
         $this->authorize('update', $project);
-
-//        $request->validate([
-//            'title' => 'sometimes|required|max:255',
-//            'description' => 'sometimes|required|max:1000',
-//        ]);
 
         $project = $this->projectService->updateProject($project, $request->all());
 
