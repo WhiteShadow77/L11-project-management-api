@@ -52,6 +52,6 @@ This project is not just a simple CRUD app; it is built to scale:
 
 Available here:
 
-[https://tmp-site-7.free.nf/docs/api](https://tmp-site-7.free.nf/docs/api)
+[View Live API Documentation](https://tmp-site-7.free.nf/docs/api)
 
 ---
