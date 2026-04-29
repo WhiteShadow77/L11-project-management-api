@@ -124,7 +124,7 @@
     </section>
 
     <section id="tech-stack">
-        <h2>🛠️ Tech Stack</h2>
+        <h2>Tech Stack</h2>
         <ul>
             <li><strong>Backend</strong>: PHP 8.2, Laravel 11</li>
             <li><strong>Database</strong>: MySQL</li>
@@ -141,6 +141,11 @@
         </p>
         <p>Live demo docs here:<br>
             <a href="{{route('site.index')}}/docs/api">{{route('site.index')}}/docs/api</a></p>
+    </section>
+
+    <section id="repository">
+        <h2>🐙 Github repository</h2>
+            <a href="https://github.com/WhiteShadow77/L11-project-management-api">https://github.com/WhiteShadow77/L11-project-management-api</a></h2>
     </section>
 
     <hr>
