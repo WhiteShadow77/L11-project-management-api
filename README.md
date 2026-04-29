@@ -57,6 +57,6 @@ password: secret
 ```
 Available here:
 
-[//]: # ([View Live API Documentation]&#40;https://tmp-site-7.free.nf/docs/api&#41;)
+[View Live API Documentation](https://tmp-site-7.free.nf/docs/api)
 
 ---
